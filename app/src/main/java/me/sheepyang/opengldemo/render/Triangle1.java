@@ -30,7 +30,7 @@ public class Triangle1 extends Shape {
 
     private int mProgram;
     private float triangleCoords[] = {
-            0f, 0.5f, 0.0f, // top
+            0.5f, 0.5f, 0.0f, // top
             -0.5f, -0.5f, 0.0f, // bottom left
             0.5f, -0.5f, 0.0f  // bottom right
     };
