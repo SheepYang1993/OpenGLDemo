@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mDataList.add(new MenuBean("三角形", Triangle1Activity.class));
         mDataList.add(new MenuBean("等腰直角三角形", Triangle2Activity.class));
-        mDataList.add(new MenuBean("彩色等腰直角三角形", Triangle1Activity.class));
+        mDataList.add(new MenuBean("彩色等腰直角三角形", Triangle3Activity.class));
         mDataList.add(new MenuBean("画一个三角形", Triangle1Activity.class));
         mDataList.add(new MenuBean("画一个三角形", Triangle1Activity.class));
         mDataList.add(new MenuBean("画一个三角形", Triangle1Activity.class));
