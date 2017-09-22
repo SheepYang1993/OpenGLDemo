@@ -21,8 +21,8 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".TriangleActivity">
-        </activity>
+        <activity android:name=".Triangle1Activity"/>
+        <activity android:name=".Triangle2Activity"/>
     </application>
 
 </manifest>

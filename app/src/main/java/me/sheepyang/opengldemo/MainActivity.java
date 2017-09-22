@@ -29,17 +29,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        mDataList.add(new MenuBean("画一个三角形", TriangleActivity.class));
-        mDataList.add(new MenuBean("画一个三角形", TriangleActivity.class));
-        mDataList.add(new MenuBean("画一个三角形", TriangleActivity.class));
-        mDataList.add(new MenuBean("画一个三角形", TriangleActivity.class));
-        mDataList.add(new MenuBean("画一个三角形", TriangleActivity.class));
-        mDataList.add(new MenuBean("画一个三角形", TriangleActivity.class));
-        mDataList.add(new MenuBean("画一个三角形", TriangleActivity.class));
-        mDataList.add(new MenuBean("画一个三角形", TriangleActivity.class));
-        mDataList.add(new MenuBean("画一个三角形", TriangleActivity.class));
-        mDataList.add(new MenuBean("画一个三角形", TriangleActivity.class));
-        mDataList.add(new MenuBean("画一个三角形", TriangleActivity.class));
+        mDataList.add(new MenuBean("三角形", Triangle1Activity.class));
+        mDataList.add(new MenuBean("等腰直角三角形", Triangle2Activity.class));
+        mDataList.add(new MenuBean("彩色等腰直角三角形", Triangle1Activity.class));
+        mDataList.add(new MenuBean("画一个三角形", Triangle1Activity.class));
+        mDataList.add(new MenuBean("画一个三角形", Triangle1Activity.class));
+        mDataList.add(new MenuBean("画一个三角形", Triangle1Activity.class));
+        mDataList.add(new MenuBean("画一个三角形", Triangle1Activity.class));
+        mDataList.add(new MenuBean("画一个三角形", Triangle1Activity.class));
+        mDataList.add(new MenuBean("画一个三角形", Triangle1Activity.class));
+        mDataList.add(new MenuBean("画一个三角形", Triangle1Activity.class));
+        mDataList.add(new MenuBean("画一个三角形", Triangle1Activity.class));
         mRecyclerView.setAdapter(new MyAdapter(mDataList));
     }
 

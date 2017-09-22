@@ -14,7 +14,7 @@ import javax.microedition.khronos.opengles.GL10;
  * Created by SheepYang on 2017-09-22.
  */
 
-public class Triangle extends Shape {
+public class Triangle1 extends Shape {
     private final String vertexShaderCode =
             "attribute vec4 vPosition;" +
                     "void main() {" +
@@ -45,7 +45,7 @@ public class Triangle extends Shape {
     //顶点之间的偏移量
     private int vertexStride = COORDS_PER_VERTEX * 4; // 每个顶点四个字节
 
-    public Triangle(View mView) {
+    public Triangle1(View mView) {
         super(mView);
     }
 
