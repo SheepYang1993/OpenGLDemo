@@ -1,4 +1,4 @@
-package me.sheepyang.opengldemo.renderer;
+package me.sheepyang.opengldemo.render;
 
 import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
