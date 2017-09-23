@@ -36,9 +36,12 @@ public class MainActivity extends AppCompatActivity {
         mDataList.add(new MenuBean("直角三角形", Triangle1Activity.class));
         mDataList.add(new MenuBean("等腰直角三角形", Triangle2Activity.class));
         mDataList.add(new MenuBean("彩色等腰直角三角形", Triangle3Activity.class));
-        mDataList.add(new MenuBean("正方形", Triangle1Activity.class));
-        mDataList.add(new MenuBean("正多边形", Triangle1Activity.class));
-        mDataList.add(new MenuBean("圆形", Triangle1Activity.class));
+        mDataList.add(new MenuBean("正方形", SquareActivity.class));
+        mDataList.add(new MenuBean("正多边形及圆形", PolygonActivity.class));
+        mDataList.add(new MenuBean("画一个三角形", Triangle1Activity.class));
+        mDataList.add(new MenuBean("画一个三角形", Triangle1Activity.class));
+        mDataList.add(new MenuBean("画一个三角形", Triangle1Activity.class));
+        mDataList.add(new MenuBean("画一个三角形", Triangle1Activity.class));
         mDataList.add(new MenuBean("画一个三角形", Triangle1Activity.class));
         mDataList.add(new MenuBean("画一个三角形", Triangle1Activity.class));
         mDataList.add(new MenuBean("画一个三角形", Triangle1Activity.class));

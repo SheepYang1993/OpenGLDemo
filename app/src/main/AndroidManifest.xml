@@ -24,6 +24,8 @@
         <activity android:name=".activity.triangle.Triangle1Activity"/>
         <activity android:name=".activity.triangle.Triangle2Activity"/>
         <activity android:name=".activity.triangle.Triangle3Activity"/>
+        <activity android:name=".activity.SquareActivity"/>
+        <activity android:name=".activity.PolygonActivity"/>
     </application>
 
 </manifest>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="me.sheepyang.opengldemo.activity.triangle.Triangle1Activity">
+
+    <android.opengl.GLSurfaceView
+        android:id="@+id/gl_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:text="opengl使用的是右手坐标系。\n屏幕中央为原点，正边界为1，负边界为-1。\n图中三角形坐标为：\n{\n\t0.5，0.5，0\n\t-0.5，-0.5，0\n\t0.5，-0.5，0\n}"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"/>
+
+    <Button
+        android:id="@+id/btn_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:text="切换绘制方式"
+        android:textSize="14sp"/>
+</RelativeLayout>

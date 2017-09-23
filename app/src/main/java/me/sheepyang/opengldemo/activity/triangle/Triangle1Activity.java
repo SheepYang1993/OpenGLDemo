@@ -7,7 +7,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import me.sheepyang.opengldemo.R;
 import me.sheepyang.opengldemo.activity.BaseActivity;
-import me.sheepyang.opengldemo.renderer.Triangle1;
+import me.sheepyang.opengldemo.renderer.triangle.Triangle1;
 
 /**
  * 画一个直角三角形

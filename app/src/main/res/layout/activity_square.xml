@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="me.sheepyang.opengldemo.activity.triangle.Triangle1Activity">
+
+    <android.opengl.GLSurfaceView
+        android:id="@+id/gl_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_setting"
+        android:padding="15dp"
+        android:text="opengl使用的是右手坐标系。\n屏幕中央为原点，正边界为1，负边界为-1。\n图中三角形坐标为：\n{\n\t0.5，0.5，0\n\t-0.5，-0.5，0\n\t0.5，-0.5，0\n}"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/tv_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:text="请输入边数n（n >= 3，n = 0 为圆形）"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"/>
+
+    <LinearLayout
+        android:id="@+id/ll_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_hint"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:digits="0123456789"
+            android:hint="请输入整数"
+            android:inputType="number"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:textSize="14sp"/>
+
+        <Button
+            android:id="@+id/btn_change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="重绘"
+            android:textSize="14sp"/>
+    </LinearLayout>
+</RelativeLayout>

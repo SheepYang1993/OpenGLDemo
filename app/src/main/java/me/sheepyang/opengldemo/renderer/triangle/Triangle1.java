@@ -1,7 +1,6 @@
-package me.sheepyang.opengldemo.renderer;
+package me.sheepyang.opengldemo.renderer.triangle;
 
 import android.opengl.GLES20;
-import android.opengl.Matrix;
 import android.view.View;
 
 import java.nio.ByteBuffer;
@@ -11,17 +10,18 @@ import java.nio.FloatBuffer;
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
+import me.sheepyang.opengldemo.renderer.Shape;
+
 /**
- * 等腰直角三角形
+ * 直角三角形
  * Created by SheepYang on 2017-09-22.
  */
 
-public class Triangle2 extends Shape {
+public class Triangle1 extends Shape {
     private final String vertexShaderCode =
             "attribute vec4 vPosition;" +
-                    "uniform mat4 vMatrix;" +
                     "void main() {" +
-                    "  gl_Position = vMatrix * vPosition;" +
+                    "  gl_Position = vPosition;" +
                     "}";
 
     private final String fragmentShaderCode =
@@ -43,17 +43,12 @@ public class Triangle2 extends Shape {
     private int mPositionHandle;
     private int mColorHandle;
     private int COORDS_PER_VERTEX = 3;
-
-    private float[] mViewMatrix = new float[16];
-    private float[] mProjectMatrix = new float[16];
-    private float[] mMVPMatrix = new float[16];
     //顶点个数
     private int vertexCount = triangleCoords.length / COORDS_PER_VERTEX;
     //顶点之间的偏移量
     private int vertexStride = COORDS_PER_VERTEX * 4; // 每个顶点四个字节
-    private int mMatrixHandler;
 
-    public Triangle2(View mView) {
+    public Triangle1(View mView) {
         super(mView);
     }
 
@@ -86,14 +81,6 @@ public class Triangle2 extends Shape {
     @Override
     public void onSurfaceChanged(GL10 gl10, int width, int height) {
         GLES20.glViewport(0, 0, width, height);
-        //计算宽高比
-        float ratio = (float) width / height;
-        //设置透视投影
-        Matrix.frustumM(mProjectMatrix, 0, -ratio, ratio, -1, 1, 3, 7);//left,right,bottom,top表示坐标的范围,0<near<far
-        //设置相机位置
-        Matrix.setLookAtM(mViewMatrix, 0, 0, 0, 7.0f, 0f, 0f, 0f, 0f, 1.0f, 0.0f);
-        //计算变换矩阵
-        Matrix.multiplyMM(mMVPMatrix, 0, mProjectMatrix, 0, mViewMatrix, 0);
     }
 
     @Override
@@ -101,10 +88,6 @@ public class Triangle2 extends Shape {
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT | GLES20.GL_DEPTH_BUFFER_BIT);//重绘背景色
         //将程序加入到OpenGLES2.0环境
         GLES20.glUseProgram(mProgram);
-        //获取变换矩阵vMatrix成员句柄
-        mMatrixHandler = GLES20.glGetUniformLocation(mProgram, "vMatrix");
-        //指定vMatrix的值
-        GLES20.glUniformMatrix4fv(mMatrixHandler, 1, false, mMVPMatrix, 0);
         //获取顶点着色器的vPosition成员句柄
         mPositionHandle = GLES20.glGetAttribLocation(mProgram, "vPosition");
         //启用三角形顶点的句柄
