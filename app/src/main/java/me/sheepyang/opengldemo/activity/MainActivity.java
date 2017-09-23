@@ -1,4 +1,4 @@
-package me.sheepyang.opengldemo;
+package me.sheepyang.opengldemo.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,6 +15,10 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import me.sheepyang.opengldemo.R;
+import me.sheepyang.opengldemo.activity.triangle.Triangle1Activity;
+import me.sheepyang.opengldemo.activity.triangle.Triangle2Activity;
+import me.sheepyang.opengldemo.activity.triangle.Triangle3Activity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,12 +33,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        mDataList.add(new MenuBean("三角形", Triangle1Activity.class));
+        mDataList.add(new MenuBean("直角三角形", Triangle1Activity.class));
         mDataList.add(new MenuBean("等腰直角三角形", Triangle2Activity.class));
         mDataList.add(new MenuBean("彩色等腰直角三角形", Triangle3Activity.class));
-        mDataList.add(new MenuBean("画一个三角形", Triangle1Activity.class));
-        mDataList.add(new MenuBean("画一个三角形", Triangle1Activity.class));
-        mDataList.add(new MenuBean("画一个三角形", Triangle1Activity.class));
+        mDataList.add(new MenuBean("正方形", Triangle1Activity.class));
+        mDataList.add(new MenuBean("正多边形", Triangle1Activity.class));
+        mDataList.add(new MenuBean("圆形", Triangle1Activity.class));
         mDataList.add(new MenuBean("画一个三角形", Triangle1Activity.class));
         mDataList.add(new MenuBean("画一个三角形", Triangle1Activity.class));
         mDataList.add(new MenuBean("画一个三角形", Triangle1Activity.class));

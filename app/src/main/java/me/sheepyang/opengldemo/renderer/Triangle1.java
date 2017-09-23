@@ -1,4 +1,4 @@
-package me.sheepyang.opengldemo.render;
+package me.sheepyang.opengldemo.renderer;
 
 import android.opengl.GLES20;
 import android.view.View;
@@ -11,6 +11,7 @@ import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
 /**
+ * 直角三角形
  * Created by SheepYang on 2017-09-22.
  */
 

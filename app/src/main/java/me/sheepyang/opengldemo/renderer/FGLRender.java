@@ -4,7 +4,7 @@
  * 
  * Created by Wuwang on 2016/9/29
  */
-package me.sheepyang.opengldemo.render;
+package me.sheepyang.opengldemo.renderer;
 
 import android.opengl.GLES20;
 import android.util.Log;

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="me.sheepyang.opengldemo.activity.triangle.Triangle1Activity">
+
+    <android.opengl.GLSurfaceView
+        android:id="@+id/gl_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:text="颜色值采用的是rgba。\n图中三个顶点的颜色值为：\n{\n\t1f, 0.913f, 0.27f, 1f,// top\n\t0.568f, 1f, 0.8f, 1f,// bottom left\n\t0.945f, 0.215f, 0.462f, 1f,// bottom right\n}"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"/>
+</RelativeLayout>

@@ -1,4 +1,4 @@
-package me.sheepyang.opengldemo.render;
+package me.sheepyang.opengldemo.renderer;
 
 import android.opengl.GLES20;
 import android.opengl.Matrix;
@@ -12,7 +12,7 @@ import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
 /**
- * 等腰直角三角形
+ * 彩色等腰直角三角形
  * Created by SheepYang on 2017-09-22.
  */
 
@@ -40,11 +40,11 @@ public class Triangle3 extends Shape {
             -0.5f, -0.5f, 0.0f, // bottom left
             0.5f, -0.5f, 0.0f  // bottom right
     };
-    //设置颜色
+    //设置颜色,顺序是rgba
     float color[] = {
-            0.0f, 1.0f, 0.0f, 1.0f,
-            1.0f, 0.0f, 0.0f, 1.0f,
-            0.0f, 0.0f, 1.0f, 1.0f
+            1f, 0.913f, 0.27f, 1f,// top
+            0.568f, 1f, 0.8f, 1f,// bottom left
+            0.945f, 0.215f, 0.462f, 1f,// bottom right
     };
     private FloatBuffer vertexBuffer;
     private int mPositionHandle;
@@ -133,7 +133,6 @@ public class Triangle3 extends Shape {
 //        mColorHandle = GLES20.glGetUniformLocation(mProgram, "vColor");
 //        //设置绘制三角形的颜色
 //        GLES20.glUniform4fv(mColorHandle, 1, color, 0);
-
 
 
         // 获取片元着色器的vColor成员的句柄

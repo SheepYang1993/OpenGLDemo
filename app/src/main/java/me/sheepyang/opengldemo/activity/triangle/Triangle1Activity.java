@@ -1,25 +1,29 @@
-package me.sheepyang.opengldemo;
+package me.sheepyang.opengldemo.activity.triangle;
 
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import me.sheepyang.opengldemo.render.Triangle1;
+import me.sheepyang.opengldemo.R;
+import me.sheepyang.opengldemo.activity.BaseActivity;
+import me.sheepyang.opengldemo.renderer.Triangle1;
 
 /**
- * 画一个三角形
+ * 画一个直角三角形
  */
-public class Triangle1Activity extends AppCompatActivity {
+public class Triangle1Activity extends BaseActivity {
     @BindView(R.id.gl_view)
     GLSurfaceView mGlView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_triangle);
+        setContentView(R.layout.activity_triangle1);
         ButterKnife.bind(this);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setTitle("直角三角形");
         mGlView.setEGLContextClientVersion(2);//创建一个OpenGL ES 2.0 context
         mGlView.setRenderer(new Triangle1(mGlView));
         mGlView.setRenderMode(GLSurfaceView.RENDERMODE_WHEN_DIRTY);//脏模式，这样可以有效降低cpu负载

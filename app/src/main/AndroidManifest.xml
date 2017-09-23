@@ -14,16 +14,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".Triangle1Activity"/>
-        <activity android:name=".Triangle2Activity"/>
-        <activity android:name=".Triangle3Activity"/>
+        <activity android:name=".activity.triangle.Triangle1Activity"/>
+        <activity android:name=".activity.triangle.Triangle2Activity"/>
+        <activity android:name=".activity.triangle.Triangle3Activity"/>
     </application>
 
 </manifest>

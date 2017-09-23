@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">OpenGLDemo</string>
+    <string name="triangle2">通过\nMatrix.frustumM(matrix, offset, left, right, bottom, top, near, far)\n方法调整坐标比例， 使直角三角形转变为等腰直角三角形。\nratio = width / height;\nleft = -ratio;\nright = ratio;\n0 &lt; near &lt; far;</string>
 </resources>

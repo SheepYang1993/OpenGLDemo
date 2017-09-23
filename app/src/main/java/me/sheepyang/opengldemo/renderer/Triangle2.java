@@ -1,4 +1,4 @@
-package me.sheepyang.opengldemo.render;
+package me.sheepyang.opengldemo.renderer;
 
 import android.opengl.GLES20;
 import android.opengl.Matrix;
@@ -89,7 +89,7 @@ public class Triangle2 extends Shape {
         //计算宽高比
         float ratio = (float) width / height;
         //设置透视投影
-        Matrix.frustumM(mProjectMatrix, 0, -ratio, ratio, -1, 1, 3, 7);
+        Matrix.frustumM(mProjectMatrix, 0, -ratio, ratio, -1, 1, 3, 7);//left,right,bottom,top表示坐标的范围,0<near<far
         //设置相机位置
         Matrix.setLookAtM(mViewMatrix, 0, 0, 0, 7.0f, 0f, 0f, 0f, 0f, 1.0f, 0.0f);
         //计算变换矩阵
