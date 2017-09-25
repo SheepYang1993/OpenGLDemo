@@ -3,7 +3,7 @@ package me.sheepyang.opengldemo.activity;
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
+import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -17,6 +17,8 @@ import me.sheepyang.opengldemo.renderer.Square;
 public class SquareActivity extends BaseActivity implements View.OnClickListener {
     @BindView(R.id.gl_view)
     GLSurfaceView mGlView;
+    @BindView(R.id.tv_type)
+    TextView mTvType;
     private Square mSquare;
 
 
@@ -56,10 +58,10 @@ public class SquareActivity extends BaseActivity implements View.OnClickListener
                 mGlView.requestRender();
                 switch (mSquare.getDrawType()) {
                     case 0:
-                        Toast.makeText(this, "顶点法绘制正方形", Toast.LENGTH_SHORT).show();
+                        mTvType.setText("当前：顶点法绘制");
                         break;
                     case 1:
-                        Toast.makeText(this, "索引法绘制正方形", Toast.LENGTH_SHORT).show();
+                        mTvType.setText("当前：索引法绘制");
                         break;
                 }
                 break;
